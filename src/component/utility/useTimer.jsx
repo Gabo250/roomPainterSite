@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
+/**
+* Creates a timer that changes a boolean flag at a given interval
+*
+* @param interval the given interval
+*
+* @returns flag
+*/
 function useTimer(interval) {
     const [ tick, setTick ] = useState(true);
     const timerInterval = useRef();

@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import useScroll from "./useScroll";
 
+
+/**
+* Checks a react element to if it is in the viewport
+*
+* @param element the given react element
+*
+* @returns inViewBox
+*/
 function useViewBox(element) {
     const [inViewBox, setInViewBox] = useState(false);
     const scrollY = useScroll();

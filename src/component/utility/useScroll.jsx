@@ -1,5 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
+/**
+* Listening the current scroll position.
+*
+* @returns scrollY
+*/
 function useScroll() {
     const [scrollY, setScrollY] = useState(0);
     const timeOutID = useRef();

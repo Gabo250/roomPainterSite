@@ -1,6 +1,14 @@
 import { useEffect, useRef } from "react";
 import useTimer from "../utility/useTimer";
 
+/**
+* Creates an element that changes the given text at a given interval
+*
+* @param text The given text array
+* @param interval The given interval
+*
+* @returns styled text element
+*/
 function TimedText({ text, interval }) {
     const tick = useTimer(interval);
     const cpyText = useRef();

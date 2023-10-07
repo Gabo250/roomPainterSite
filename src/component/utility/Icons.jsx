@@ -1,3 +1,6 @@
+// ******This file contains the SVG elements that using on this website
+
+//These SVGs are from heroicons.com
 export const SurveyIcon = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="purple" className="w-12 h-12">
@@ -14,6 +17,8 @@ export const PriceOfferIcon = () => {
     );
 };
 
+
+//These SVGs are from flaticon.com
 export const PhoneIcon = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="green" className="w-6 h-6">

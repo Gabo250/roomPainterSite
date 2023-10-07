@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom"
 
+/**
+* Sets the scroll on the top when the URL is changed
+*
+* @returns null
+*/
 function ScrollTop() {
     const path = useLocation();
 

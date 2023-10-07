@@ -1,5 +1,7 @@
 import { PriceOfferIcon, SurveyIcon } from "./Icons";
 
+// ****** This file is created for datas using on this website
+
 export const navItems = [
     { name: "Főoldal", href: "/" },
     { name: "Szolgáltatások", href: "/szolgaltatasok" },
