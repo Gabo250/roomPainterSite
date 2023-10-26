@@ -135,3 +135,19 @@ export const serviceItems = [
         altIcon: 'gipszkarton icon'
     }
 ];
+
+export const servPrices = [
+    "Festés": {
+        "Előmunkálatok": {
+            
+        }
+    },
+
+    "Tapétázás": {
+        
+    },
+
+    "Gipszkartonozás": {
+        
+    }  
+];
