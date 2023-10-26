@@ -1,7 +1,13 @@
 import Marketing from "./Marketing";
 import WorkProgress from "./WorkProgress";
+import useMounted from "../utility/useMounted";
 
 function Home() {
+    const hasMounted = useMounted();
+    if (!hasMounted) {
+        return null;
+    }
+
     return (
         <>
             <section className="relative py-32 bg-gradient-to-l from-white to-[50%] to-slate-200 md:bg-gradient-to-t">

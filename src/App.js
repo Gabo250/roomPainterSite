@@ -4,6 +4,7 @@ import Home from "./component/home/Home";
 import Services from "./component/Services/Services";
 import Footer from "./component/footer/Footer";
 import ScrollTop from "./component/utility/ScrollTop";
+import Price from "./component/price/Price";
 
 function App() {
   return (    
@@ -12,7 +13,8 @@ function App() {
       <Header />
       <Routes>       
           <Route path="/" exact element={ <Home /> } />
-          <Route path="/szolgaltatasok" element={ <Services /> } />        
+          <Route path="/szolgaltatasok" element={ <Services /> } />       
+          <Route path="/arak" element={ <Price /> } /> 
       </Routes>
       <Footer />
     </BrowserRouter>

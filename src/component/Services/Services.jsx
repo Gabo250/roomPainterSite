@@ -28,8 +28,8 @@ function Services() {
                                     </ul>
                                 </div>
 
-                                <figure className="h-[400px] w-[400px] overflow-hidden rounded-[110px]">
-                                    <img src={ service.img } alt={ service.alt } className="h-[400px] w-[400px] object-cover transition-transform duration-[1500ms] hover:scale-110" />
+                                <figure className="h-[400px] w-[400px] overflow-hidden rounded-[110px] 2xsm:h-[300px] 2xsm:w-[300px]">
+                                    <img src={ service.img } alt={ service.alt } className="h-[400px] w-[400px] object-cover transition-transform duration-[1500ms] hover:scale-110 2xsm:h-[300px] 2xsm:w-[300px]" />
                                 </figure>                            
                             </article>
 

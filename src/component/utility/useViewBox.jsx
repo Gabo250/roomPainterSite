@@ -5,7 +5,7 @@ import useScroll from "./useScroll";
 /**
 * Checks a react element to if it is in the viewport
 *
-* @param element the given react element
+* @param element the given react element's ref
 *
 * @returns inViewBox
 */

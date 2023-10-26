@@ -7,7 +7,7 @@ import useTimer from "../utility/useTimer";
 * @param text The given text array
 * @param interval The given interval
 *
-* @returns styled text element
+* @returns styled h1 element
 */
 function TimedText({ text, interval }) {
     const tick = useTimer(interval);

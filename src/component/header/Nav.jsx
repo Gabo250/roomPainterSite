@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { navItems } from "../utility/datas";
 import BurgerNav from "./BurgerNav";
 import { useState } from "react";
+import ScrollLink from "./ScrollLink";
 
 function Nav() {
     const [burgClicked, setBurgClicked] = useState(false);
@@ -16,14 +17,25 @@ function Nav() {
                                             :
                                               `sm:hidden` }`}>
                 {
-                    navItems.map((nav) => {
-                        return <NavLink key={ nav.href } to={ nav.href } style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
-                                className={`relative uppercase p-5 font-bold
-                                            after:content-[''] after:absolute after:w-[calc(100%-2.5rem)] after:scale-x-0 after:transition-transform after:duration-500 after:h-[2px] after:bg-white after:top-[80%]
-                                            after:left-[1.25rem]  hover:after:block after:origin-left after:hover:origin-right hover:after:scale-x-100
-                                            before:content-[''] before:absolute before:top-[20%] before:left-[1.25rem] before:w-[calc(100%-2.5rem)] before:transition-transform
-                                            before:duration-500 before:h-[2px] before:bg-white before:scale-x-0 before:origin-right before:hover:origin-left hover:before:scale-x-100`}
-                                >{nav.name}</NavLink>
+                    navItems.map((nav) => {                        
+                            if (nav.name !== "Kapcsolat") {
+                                return <NavLink key={ nav.href } to={ nav.href } style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
+                                        className={`relative uppercase p-5 font-bold
+                                                    after:content-[''] after:absolute after:w-[calc(100%-2.5rem)] after:scale-x-0 after:transition-transform after:duration-500 after:h-[2px] after:bg-white after:top-[80%]
+                                                    after:left-[1.25rem]  hover:after:block after:origin-left after:hover:origin-right hover:after:scale-x-100
+                                                    before:content-[''] before:absolute before:top-[20%] before:left-[1.25rem] before:w-[calc(100%-2.5rem)] before:transition-transform
+                                                    before:duration-500 before:h-[2px] before:bg-white before:scale-x-0 before:origin-right before:hover:origin-left hover:before:scale-x-100`}
+                                    >{nav.name}</NavLink>
+                            }
+                            else {
+                                return <ScrollLink key={ nav.href } to={ nav.href } scrollInfo={ {behavior: "smooth", block: "start"} }
+                                        className={`relative uppercase p-5 font-bold
+                                                    after:content-[''] after:absolute after:w-[calc(100%-2.5rem)] after:scale-x-0 after:transition-transform after:duration-500 after:h-[2px] after:bg-white after:top-[80%]
+                                                    after:left-[1.25rem]  hover:after:block after:origin-left after:hover:origin-right hover:after:scale-x-100
+                                                    before:content-[''] before:absolute before:top-[20%] before:left-[1.25rem] before:w-[calc(100%-2.5rem)] before:transition-transform
+                                                    before:duration-500 before:h-[2px] before:bg-white before:scale-x-0 before:origin-right before:hover:origin-left hover:before:scale-x-100`}
+                                 >{nav.name}</ScrollLink>
+                            }
                     })
                 }
             </nav>

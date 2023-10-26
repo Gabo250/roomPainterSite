@@ -6,7 +6,7 @@ export const navItems = [
     { name: "Főoldal", href: "/" },
     { name: "Szolgáltatások", href: "/szolgaltatasok" },
     { name: "Árak", href: "/arak" },
-    { name: "Kapcsolat", href: "/kapcsolat" }
+    { name: "Kapcsolat", href: "#conn" }
 ];
 
 export const headerTexts = [
@@ -35,7 +35,7 @@ export const workFlow = [
         name: 'felmérés',
         description: `Előzetes időpont egyeztetés után helyszíni felmérés következik,
                       ahol megnézem a falakat, hogy milyen állapotban vannak illetve felmérem a munkaterületet.
-                      A felmérés Vecsés 20 km-es körzetében ingyenes, az ennél távolabb eső helyszínekről üzemanyag pénzt számolok fel,
+                      A felmérés Vecsés és 20 km-es körzetében ingyenes, az ennél távolabb eső helyszínekről üzemanyag pénzt számolok fel,
                       amit levonok a végső árból az árajánlat ELFOGADÁSA esetén.`,
         icon: <SurveyIcon />
     },
@@ -78,13 +78,13 @@ export const serviceItems = [
     {
         name: 'Mázolás',
         description: `A mázolás egy olyan festési technika, amely során vékony,
-                    átlátszó festék- vagy színréteget alkalmazunk egy már meglévő felületre, általában nyílászárókra.
-                    Mázolni sima felületre célszerű, ezért előtte le kell csiszolni a felületet.`,
+                    átlátszó festék- vagy színréteget alkalmazunk egy már meglévő felületre.
+                    Mázolni sima felületre célszerű, ezért előtte gyakran le kell csiszolni a felületet.`,
         listDescription:
             {
                 'Felület előkészítés:': `A sikeres mázoláshoz fontos a felület előkészítése.
                                         A tiszta, sima és alaposan előkészített felületek segítenek a mázolásnak tartós és vonzó megjelenést biztosítani.
-                                        Ezért mint a fentebb említve lett fontos csiszolni a felületet.`,
+                                        Ezért mint a fentebb említve lett gyakran csiszolni kell a felületet.`,
                 'Festékválasztás:': `A megfelelő festék kiválasztása kulcsfontosságú. Célszerű jó minőségü festéket választani.`
             },
         img: './img/mázolás.webp',
