@@ -1,3 +1,11 @@
+/**
+ * It creates a burger nav 'X' icon
+ * 
+ * @param burgNavClicked A boolean state from the parent
+ * @param setBurgClicked A state from the parent to set the state
+ * 
+ * @returns burger 'X' element
+ */
 function BurgerNav({ burgNavClicked, setBurgNavClicked }) {
     const handleClick = () => {
         setBurgNavClicked(!burgNavClicked);        
@@ -6,7 +14,7 @@ function BurgerNav({ burgNavClicked, setBurgNavClicked }) {
     return (
         <>
             <label className="relative hidden w-10 h-10 cursor-pointer select-none sm:block z-[1]">
-                <button onClick={ handleClick } className="absolute h-0 w-0 opacity-0 cursor-pointer" />
+                <button aria-label="Burger menu" onClick={ handleClick } className="absolute h-0 w-0 opacity-0 cursor-pointer" />
 
                 <div className="relative flex flex-col justify-center items-center gap-y-2 top-1/2 -translate-y-[50%]">
                     <span className={`relative w-8 h-[2.5px] bg-black transition-transform duration-500 shadow-[0px_0px_5px_0px_rgba(0,0,0,.7)] ${ burgNavClicked ? 'translate-y-[calc(.5rem+2.5px)] rotate-[405deg]' : '' }`} />

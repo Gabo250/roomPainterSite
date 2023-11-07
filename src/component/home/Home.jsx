@@ -1,12 +1,9 @@
 import Marketing from "./Marketing";
 import WorkProgress from "./WorkProgress";
-import useMounted from "../utility/useMounted";
+import useTitleChange from "../utility/useTitleChange";
 
 function Home() {
-    const hasMounted = useMounted();
-    if (!hasMounted) {
-        return null;
-    }
+    useTitleChange("Geringer János - Lakásfelújítás Budapesten és Pest megyében");
 
     return (
         <>
@@ -22,9 +19,10 @@ function Home() {
                         <p className="text-left text-[1.05rem] leading-7 2xsm:text-justify pr-5">
                             <span className="text-[1.6rem] mr-2 font-semibold">Geringer János</span>
                             vagyok, <span className="text-green-800 text-[1.2rem] font-bold">Szobafestő-mázoló</span> végzettséggel rendelkezem.
-                            Iskola befejezése után nem sokkal volt szerencsém kimenni németországba 2 évig, ahol mester szakemberek
-                            mellett dolgoztam fejlesztve a szaktudásomat illetve megtanultam a gipszkartonozást.
-                            A megfelelő tudás megszerzésével haza jöttem nem sokkal utána kiváltottam az egyéni vállalkozást, 6 éve vagyok egyéni vállalkozó.
+                            Tanulmányaim befejezése után nem sokkal volt szerencsém kimenni németországba dolgozni 2 évig, ahol mester szakemberek
+                            mellett dolgoztam fejlesztve a szaktudásomat illetve kitanultam a gipszkartonozást.
+                            A megfelelő tudás megszerzésével haza jöttem, hogy itthon valósítsam meg magam így néhány év után elindítottam az egyéni vállalkozásomat,
+                            mára már 6 éve vagyok egyéni vállalkozó, rengeteg ügyfélemnek segítettem megvalósítani az elképzeléseit.
                             Célom, hogy segítsek ügyfeleimnek otthonaikat és környezetüket szebbé és kényelmesebbé tenni.
                         </p>
                     </div>

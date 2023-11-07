@@ -3,10 +3,13 @@ import Header from "./component/header/Header";
 import Home from "./component/home/Home";
 import Services from "./component/Services/Services";
 import Footer from "./component/footer/Footer";
-import ScrollTop from "./component/utility/ScrollTop";
 import Price from "./component/price/Price";
+import Gallery from "./component/gallery/Gallery";
+import ScrollTop from "./component/utility/ScrollTop";
+import NotFound from "./component/errorComp/NotFound";
 
-function App() {
+function App() { 
+
   return (    
     <BrowserRouter>
       <ScrollTop />
@@ -15,6 +18,8 @@ function App() {
           <Route path="/" exact element={ <Home /> } />
           <Route path="/szolgaltatasok" element={ <Services /> } />       
           <Route path="/arak" element={ <Price /> } /> 
+          <Route path="/munkak/*" element={ <Gallery /> } />
+          <Route path="/*" element={ <NotFound /> } />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -2,18 +2,17 @@ import { Link } from "react-router-dom";
 import { EmailIcon, PhoneIcon } from "../utility/Icons";
 import { navItems } from "../utility/datas";
 import ScrollLink from "../header/ScrollLink";
-import useMounted from "../utility/useMounted";
 
 function Footer() {
-    const hasMounted = useMounted();
-    if (!hasMounted) {
-        return null;
-    }
-
     return (
         <footer id="conn" className="flex flex-row justify-evenly items-center py-10 bg-slate-600 xsm:flex-col xsm:gap-10">
             <article className="flex flex-col gap-2">
                 <img src="./img/logo.webp" alt="GJ logo" className="relative w-14 h-10 left-[50%] -translate-x-[50%] bottom-4" />
+
+                <div className="text-center mb-2">
+                    <span className="text-zinc-300 text-xl">Geringer János EV.</span>
+                </div>
+
                 <div className="flex flex-row gap-2">
                     <PhoneIcon />
                     <span className="italic select-text font-semibold text-zinc-300">+36(20)-205-2463</span>

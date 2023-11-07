@@ -7,7 +7,7 @@ import useScroll from "./useScroll";
 *
 * @param element the given react element's ref
 *
-* @returns inViewBox
+* @returns inViewBox - boolean
 */
 function useViewBox(element) {
     const [inViewBox, setInViewBox] = useState(false);

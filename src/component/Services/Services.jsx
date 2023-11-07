@@ -1,6 +1,9 @@
 import { serviceItems } from "../utility/datas";
+import useTitleChange from "../utility/useTitleChange";
 
 function Services() {
+    useTitleChange("Geringer János Lakásfelújítási Szolgáltatások - Szobafestés, Mázolás, Tapétázás, Gipszkartonozás"); 
+
     return (
         <section className="flex flex-col">
             {
@@ -17,7 +20,7 @@ function Services() {
                                             Object.keys(service.listDescription).map((key, id) => {
                                                 return (
                                                     <li key={ key + id } className="mt-3 flex flex-row sm:flex-col">   
-                                                        <h3 className="mr-2 font-semibold text-black whitespace-nowrap">{ key }</h3>                                                     
+                                                        <h2 className="mr-2 font-semibold text-black whitespace-nowrap">{ key }</h2>                                                     
                                                         <p className="sm:text-justify">                                                            
                                                             { service.listDescription[key] }
                                                         </p>

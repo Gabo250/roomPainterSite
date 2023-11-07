@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 *
 * @param interval the given interval
 *
-* @returns flag
+* @returns boolean flag
 */
 function useTimer(interval) {
     const [ tick, setTick ] = useState(true);

@@ -1,13 +1,8 @@
 import { headerTexts } from "../utility/datas";
-import useMounted from "../utility/useMounted";
 import Nav from "./Nav";
 import TimedText from "./TimedText";
 
 function Header() {
-    const hasMounted = useMounted();
-    if (!hasMounted) {
-        return null;
-    }
 
     return(
         <header className="relative overflow-hidden z-[1]">

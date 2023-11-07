@@ -5,6 +5,7 @@ import { PriceOfferIcon, SurveyIcon } from "./Icons";
 export const navItems = [
     { name: "Főoldal", href: "/" },
     { name: "Szolgáltatások", href: "/szolgaltatasok" },
+    { name: "Munkák", href: "/munkak" },
     { name: "Árak", href: "/arak" },
     { name: "Kapcsolat", href: "#conn" }
 ];
@@ -44,7 +45,7 @@ export const workFlow = [
         name: 'árajánlat',
         description: `A felmérés elvégzése után elkészítem az árajánlatot, ami kitér minden részletre.
                       Az árajánlat elkészítése után az árajánlatot elküldöm email-en keresztül mindenkép.
-                      A rejtett hibák illetve munka közben a plusz munkák igénye további költséggel járhat,
+                      A rejtett hibák illetve az árajánlat elfogadása utáni plusz munkák igénye további költséggel járhat,
                       amit nem tartalmaz az árajánlat.`,
         icon: <PriceOfferIcon />
     }
@@ -132,22 +133,82 @@ export const serviceItems = [
         img: './img/gipszkartonozás.webp',
         icon: './img/gipszkarton icon.webp',
         alt: 'gipszkartonozás létráról',
-        altIcon: 'gipszkarton icon'
+        iconAlt: 'gipszkarton icon'
     }
 ];
 
-export const servPrices = [
-    "Festés": {
+export const servPrices = {
+    
         "Előmunkálatok": {
-            
+            "Horony vakolás (5cm mélységig)": "1 000 Ft / nm",
+            "Glettelés": "750 Ft / nm",
+            "Csiszolás": "160 Ft / nm",
+            "Élvédőzés": "400 Ft / fm",
+            "Papírtakarás": "340 Ft / nm",
+            "Fóliatakarás": "200 Ft / nm",
+            "Stukkózás 5cm-ig": "650 Ft-tól",
+            "Stukkózás 5cm felett": "850 Ft-tól",
+            "Rozetta": "1500 Ft-tól"            
+        },
+
+        "Festés": {
+            "Műanyagfesték eltávolítás": "800 Ft / nm",
+            "Enyves, mészfesték eltávolítás": "650 Ft / nm",
+            "Színhatárképzés szalaggal": "250 Ft / fm",
+            "Acrylozás (2mm-ig)": "170 Ft / fm",
+            "Festés - fehér (1 réteg)": "700 Ft / nm",
+            "Festés - fehér (2 réteg)": "1 400 Ft / nm",
+            "Penészgátló festés (2 réteg)": "1 400 Ft / nm",
+            "Homlokzatfestés - fehér (2 réteg)": "2 100 Ft / nm",
+            "Díszítőfestés": "3 500 Ft-tól / nm"
+        },
+    
+        "Mázolás": {
+            "Régi mázolt felület eltávolítás": "2 500 Ft / nm",
+            "Mázolás régi felületen": "7 500 ft / nm",
+            "Mázolás új felületen (nagyobb hibák javításával)": "6 000 Ft / nm",
+            "Csőmázolás (80mm-ig)": "450 Ft / fm",
+            "Régi fémfelület mázolás": "5 500 Ft",
+            "Lazúrozás vékony lazúrral (2 réteg)": "2 500 Ft / nm",
+            "Lazúrozás vastag lazúrral (2 réteg)": "2 700 Ft / nm"
+        },
+    
+        "Tapétázás": {
+            "Tapéta eltávolítás": "600 Ft / nm",
+            "Üvegfátyol tapéta Rakása": "1 200 Ft / nm",
+            "Könnyű papír tapéta rakása": "2 500 Ft / nm",
+            "Középnehéz tapéta (habos,viles) rakása": "3 500 Ft / nm",
+            "Nehéz tapéta (textil,vinyl) rakása": "4 200 Ft / nm",
+            "Üvegszálas tapéta rakása": "4 000 Ft / nm",
+            "Hőszigetelő tapéta rakása": "3 600 Ft / nm",
+            "Poszter,fotó tapéta rakása": "5 500 Ft / nm",
+            "Bordűr rakása": "400 Ft / fm"
+        },
+    
+        "Gipszkartonozás": {
+            "Előtétfal": "3 500 Ft / nm",
+            "Válaszfal (2x2)": "4 800 Ft / nm",
+            "Válaszfal (2x1)": "4 000 Ft / nm",
+            "Mennyezet (szimpla szerkezettel)": "3 800 Ft / nm",
+            "Álmennyezet (dupla szerkezettel)": "4 500 Ft / nm",
+            "Ragasztás": "2 800 Ft / nm",
+            "Spalettázás": "2 500 Ft / nm",
+            "Szigetelés": "750 Ft / nm",
+            "Fóliázás": "400 Ft / nm",
+            "Bandázsolás:": "750 Ft / fm"
+        }   
+};
+
+export const galleryImages = {
+    "Faldekoráció festés képek": [
+        {
+            url: "../img/gallery/kevés csikos fal.webp",
+            alt: "csikos fali minázat festve a falon"
+        },
+        
+        {
+            url: "../img/gallery/sok csikos fal.webp",
+            alt: "sűrű csikos fali minázat festve a falon"
         }
-    },
-
-    "Tapétázás": {
-        
-    },
-
-    "Gipszkartonozás": {
-        
-    }  
-];
+    ]
+};
