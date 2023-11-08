@@ -1,5 +1,5 @@
 import { galleryImages } from "../utility/datas";
-import TypeCard from "./TypeCard";
+//import TypeCard from "./TypeCard";
 import { useParams } from "react-router-dom";
 import LoadImages from "./LoadImages";
 import useTitleChange from "../utility/useTitleChange";
