@@ -7,7 +7,7 @@ function Footer() {
     return (
         <footer id="conn" className="flex flex-row justify-evenly items-center py-10 bg-slate-600 xsm:flex-col xsm:gap-10">
             <article className="flex flex-col gap-2">
-                <img src="./img/logo.webp" alt="GJ logo" className="relative w-14 h-10 left-[50%] -translate-x-[50%] bottom-4" />
+                <img src="./img/logo.webp" alt="GJ logo" className="relative w-14 h-[35.897px] left-[50%] -translate-x-[50%] bottom-4" />
 
                 <div className="text-center mb-2">
                     <span className="text-zinc-300 text-xl">Geringer János EV.</span>

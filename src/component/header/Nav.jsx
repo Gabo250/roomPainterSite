@@ -10,7 +10,7 @@ function Nav() {
     return (
         <div className="relative w-full flex flex-row justify-evenly items-center bg-gradient-to-r from-[rgb(0_0_0_/_0)] to-slate-400 shadow-sm shadow-slate-700
                         gap-52 sm:justify-around sm:!gap-[50%] sm:py-2 sm:z-[1] xmd:gap-0">
-            <img src="./img/logo.webp" alt="GJ logo" className="w-14 h-10 relative" />
+            <img src="./img/logo.webp" alt="GJ logo" className="w-14 h-[35.897px] relative" />
             
             <nav className={`relative flex flex-row gap-5 md:gap-0
                             ${ burgClicked ? `sm:absolute sm:!flex sm:flex-col sm:gap-0 sm:top-[100%] sm:left-[calc(91%-168px)] sm:items-end sm:z-[2]` 
