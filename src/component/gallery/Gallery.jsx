@@ -11,7 +11,7 @@ import useTitleChange from "../utility/useTitleChange";
  */
 function Gallery() {
     const params = useParams();
-    const objKeys = Object.keys(galleryImages);
+    //const objKeys = Object.keys(galleryImages);
 
     useTitleChange("Geringer János - Lakásfelújítás munkák képek");
 
@@ -20,11 +20,12 @@ function Gallery() {
     }
     else {
         return (
-            <section className="bg-gradient-to-r from-zinc-700 via-zinc-400 to-slate-200 flex flex-row flex-wrap py-20 px-10">
+            <section className="bg-gradient-to-r from-zinc-700 via-zinc-400 to-slate-200 flex flex-row justify-center flex-wrap py-20 px-10">
+                <h2 className="text-4xl font-semibold">Feltöltés alatt.</h2>
                 {
-                    objKeys.map((name) => {                    
+                    /*objKeys.map((name) => {                    
                         return <TypeCard key={ name } name={ name } images={ galleryImages[name] } />
-                    })
+                    })*/
                 }
             </section>
         );

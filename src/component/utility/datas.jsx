@@ -36,7 +36,7 @@ export const workFlow = [
         name: 'felmérés',
         description: `Előzetes időpont egyeztetés után helyszíni felmérés következik,
                       ahol megnézem a falakat, hogy milyen állapotban vannak illetve felmérem a munkaterületet.
-                      A felmérés Vecsés és 20 km-es körzetében ingyenes, az ennél távolabb eső helyszínekről üzemanyag pénzt számolok fel,
+                      A felmérés Vecsés és 30 km-es körzetében ingyenes, az ennél távolabb eső helyszínekről üzemanyag pénzt számolok fel,
                       amit levonok a végső árból az árajánlat ELFOGADÁSA esetén.`,
         icon: <SurveyIcon />
     },
