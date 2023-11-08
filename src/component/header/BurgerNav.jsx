@@ -25,7 +25,7 @@ function BurgerNav({ burgNavClicked, setBurgNavClicked }) {
             </label>
 
             <span className={`absolute top-[50%] left-[88%] -translate-x-[50%] -translate-y-[50%] bg-slate-500 bg-opacity-50
-                                backdrop-blur-[8px] w-0 h-0 rounded-full transition-[width,height] duration-200 z-[-1]
+                                backdrop-blur-[8px] w-0 h-0 rounded-full transition-[width,height] duration-500 z-[-1]
                                 ${ burgNavClicked ? 'w-[45rem] h-[45rem]' : '' }`} /> 
         </>
     );

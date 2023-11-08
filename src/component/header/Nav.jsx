@@ -13,9 +13,9 @@ function Nav() {
             <img src="./img/gj-logo.webp" alt="GJ logo" className="w-14 h-[35.897px] relative" />
             
             <nav className={`relative flex flex-row gap-5 md:gap-0
-                            ${ burgClicked ? `sm:absolute sm:!flex sm:flex-col sm:gap-0 sm:top-[100%] sm:left-[calc(91%-168px)] sm:items-end sm:z-[2]` 
+                            ${ burgClicked ? `sm:absolute sm:!flex sm:flex-col sm:gap-0 sm:top-[100%] sm:left-[calc(91%-168px)] sm:items-end sm:z-[2]  sm:scale-100 sm:transition-transform sm:duration-500` 
                                             :
-                                              `sm:hidden` }`}>
+                                             `sm:absolute sm:!flex sm:flex-col sm:gap-0 sm:top-[100%] sm:left-[calc(91%-168px)] sm:items-end sm:translate-x-[15vw] sm:-translate-y-[60%] sm:scale-0 sm:transition-transform sm:duration-500` }`}>
                 {
                     navItems.map((nav) => {                        
                             if (nav.name !== "Kapcsolat") {
