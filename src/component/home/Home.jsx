@@ -22,7 +22,7 @@ function Home() {
                             Tanulmányaim befejezése után nem sokkal volt szerencsém kimenni németországba dolgozni 2 évig, ahol mester szakemberek
                             mellett dolgoztam fejlesztve a szaktudásomat illetve kitanultam a gipszkartonozást.
                             A megfelelő tudás megszerzésével haza jöttem, hogy itthon valósítsam meg magam így néhány év után elindítottam az egyéni vállalkozásomat,
-                            mára már 6 éve vagyok egyéni vállalkozó, rengeteg ügyfélemnek segítettem megvalósítani az elképzeléseit.
+                            mára már 6 éve vagyok egyéni vállalkozó, rengeteg ügyfelemnek segítettem megvalósítani az elképzeléseit.
                             Célom, hogy segítsek ügyfeleimnek otthonaikat és környezetüket szebbé és kényelmesebbé tenni.
                         </p>
                     </div>
