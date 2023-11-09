@@ -8,12 +8,14 @@
 *
 * @returns Anchor element and its children
 */
-function ScrollLink({ to, scrollInfo, className, children }) {
+function ScrollLink({ to, scrollInfo, className, children, onClick }) {
     function clickHandle(e) {
         e.preventDefault();
         if (!to) {
             return;
         }
+
+        onClick();
 
         const clickedElement = e.currentTarget;
         const targetElement = document.getElementById(clickedElement.getAttribute("href").slice(1));

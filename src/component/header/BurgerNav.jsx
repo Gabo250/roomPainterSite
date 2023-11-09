@@ -13,7 +13,7 @@ function BurgerNav({ burgNavClicked, setBurgNavClicked }) {
 
     return (
         <>
-            <label className="relative hidden w-10 h-10 cursor-pointer select-none sm:block z-[1]">
+            <label className="relative hidden w-10 h-10 cursor-pointer select-none md:block z-[1]">
                 <button aria-label="Burger menu" onClick={ handleClick } className="absolute h-0 w-0 opacity-0 cursor-pointer" />
 
                 <div className="relative flex flex-col justify-center items-center gap-y-2 top-1/2 -translate-y-[50%]">

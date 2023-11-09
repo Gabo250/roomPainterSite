@@ -20,7 +20,7 @@ function Home() {
                             <span className="text-[1.6rem] mr-2 font-semibold">Geringer János</span>
                             vagyok, <span className="text-green-800 text-[1.2rem] font-bold">Szobafestő-mázoló</span> végzettséggel rendelkezem.
                             Tanulmányaim befejezése után nem sokkal volt szerencsém kimenni németországba dolgozni 2 évig, ahol mester szakemberek
-                            mellett dolgoztam fejlesztve a szaktudásomat illetve kitanultam a gipszkartonozást.
+                            mellett dolgozhattam fejlesztve a szaktudásomat illetve kitanultam a gipszkartonozást.
                             A megfelelő tudás megszerzésével haza jöttem, hogy itthon valósítsam meg magam így néhány év után elindítottam az egyéni vállalkozásomat,
                             mára már 6 éve vagyok egyéni vállalkozó, rengeteg ügyfelemnek segítettem megvalósítani az elképzeléseit.
                             Célom, hogy segítsek ügyfeleimnek otthonaikat és környezetüket szebbé és kényelmesebbé tenni.
