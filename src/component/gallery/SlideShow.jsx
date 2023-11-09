@@ -8,7 +8,7 @@ import useScroll from "../utility/useScroll";
  * 
  * @param images The given images
  * @param currentIndex The index of current image
- * @param loadIMG The given state from the parent element which it can set the modal off
+ * @param loadIMG The given state from the parent element which it can set the modal off with
  * 
  * @returns 
  */
