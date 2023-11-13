@@ -7,6 +7,7 @@ import Price from "./component/price/Price";
 import Gallery from "./component/gallery/Gallery";
 import ScrollTop from "./component/utility/ScrollTop";
 import NotFound from "./component/errorComp/NotFound";
+import Cookie from "./component/footer/Cookie";
 
 function App() { 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/munkak/*" element={ <Gallery /> } />
           <Route path="/*" element={ <NotFound /> } />
       </Routes>
+      <Cookie />
       <Footer />
     </BrowserRouter>
   );

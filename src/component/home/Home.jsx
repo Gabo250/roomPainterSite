@@ -3,7 +3,7 @@ import WorkProgress from "./WorkProgress";
 import useTitleChange from "../utility/useTitleChange";
 
 function Home() {
-    useTitleChange("Geringer János - Lakásfelújítás Budapesten és Pest megyében");
+    useTitleChange("Geringer János - Lakásfelújítás Vecsésen, Budapesten és Pest megyében");
 
     return (
         <>
