@@ -12,7 +12,7 @@ function WorkFlowCard({ name, description, icon }) {
 
     return (
         <article className="relative bg-gray-100 flex flex-col items-center w-80 h-[26rem] gap-3 p-5 rounded-2xl
-                            shadow-2xl shadow-slate-500 2xsm:w-11/12">   
+                            shadow-2xl shadow-slate-500 2xsm:w-11/12 xsm:h-auto">   
             { 
                 <div ref={ iconRef } className={ iconInViewBox ? 'animate-fade-in' : 'opacity-0' }>
                     { icon } 
