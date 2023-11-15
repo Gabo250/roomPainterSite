@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 * @returns boolean flag
 */
 function useTimer(interval) {
-    const [ tick, setTick ] = useState(true);
+    const [ tick, setTick ] = useState(() => { return true });
     const timerInterval = useRef();
 
     useEffect(() => {

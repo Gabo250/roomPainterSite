@@ -14,8 +14,8 @@ import useScroll from "../utility/useScroll";
  */
 function SlideShow({ images, currentIndex, loadIMG }) {
     const scrollY = useScroll();
-    const [isLeftArrowDisabled, setIsLeftArrowDisabled] = useState(currentIndex === 0);
-    const [isRightArrowDisabled, setIsRightArrowDisabled] = useState(currentIndex === images.length - 1);
+    const [isLeftArrowDisabled, setIsLeftArrowDisabled] = useState(() => { return currentIndex === 0 });
+    const [isRightArrowDisabled, setIsRightArrowDisabled] = useState(() => { return currentIndex === images.length - 1 });
     const index = useRef(currentIndex);
 
     const handleCLoseCLick = () => {

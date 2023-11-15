@@ -15,7 +15,9 @@ function ScrollLink({ to, scrollInfo, className, children, onClick }) {
             return;
         }
 
-        onClick();
+        if (onClick) {
+            onClick();
+        }
 
         const clickedElement = e.currentTarget;
         const targetElement = document.getElementById(clickedElement.getAttribute("href").slice(1));
