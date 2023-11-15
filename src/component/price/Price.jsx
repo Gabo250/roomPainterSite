@@ -12,7 +12,7 @@ function Price() {
             <div className="basis-full flex flex-col justify-center items-center gap-2">
                 <p className="relative text-3xl font-extrabold text-gray-700 text-center sm:text-xl
                             before:absolute before:left-[60%] before:top-[110%] before:w-2/5 before:h-[.35rem] before:content-['']
-                            before:bg-red-600">Az árak anyag nélkül értendők!</p>
+                            before:bg-red-600">Az árak az anyagot nem tartalmazzák!</p>
             </div>
             
             {

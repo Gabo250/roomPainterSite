@@ -12,7 +12,7 @@ function useTimer(interval) {
     const timerInterval = useRef();
 
     useEffect(() => {
-        timerInterval.current = setInterval(() => { setTick(!tick) }, interval);
+        timerInterval.current = setInterval(() => { setTick(prev => !prev) }, interval);
         
         return () => { clearInterval(timerInterval.current); }
     }, [interval, tick]);
