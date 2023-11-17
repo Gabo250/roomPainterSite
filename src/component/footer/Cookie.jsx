@@ -5,7 +5,7 @@ function Cookie() {
     const [visible, setVisible] = useState(() => { return getCookie("accepted") ? false : true });
 
     const handleOkClick = () => {
-        setCookie("accepted", true, experationDate.WEEK);
+        setCookie("accepted", true, experationDate.YEAR);
         setVisible(false);
     }
 

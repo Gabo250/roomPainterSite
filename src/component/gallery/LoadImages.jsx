@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SlideShow from "./SlideShow";
-import useTitleChange from "../utility/useTitleChange";
+import useMetaDataChange from "../utility/useMetaDataChange";
 
 /**
  * It creates a section with images.
@@ -13,7 +13,7 @@ import useTitleChange from "../utility/useTitleChange";
 function LoadImages({ images, titleName}) {
     const [ slideImg, setSlideImg ] = useState({});
 
-    useTitleChange(`Geringer János - ${ titleName }`);
+    useMetaDataChange(`Képek a ${ titleName } munkáról`, `Geringer János - ${ titleName }`, window.location.href);
 
     const handleClick = (id) =>{   
         let update = {

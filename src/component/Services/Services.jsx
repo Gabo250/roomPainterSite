@@ -1,8 +1,10 @@
 import { serviceItems } from "../utility/datas";
-import useTitleChange from "../utility/useTitleChange";
+import useMetaDataChange from "../utility/useMetaDataChange";
 
 function Services() {
-    useTitleChange("Geringer János Lakásfelújítási Szolgáltatások - Szobafestés, Mázolás, Tapétázás, Gipszkartonozás"); 
+    useMetaDataChange("Lakásfelújítás munkálatok leírása, amiket elvállalok - mikre érdemes figyelni adott munkálatnál",
+                        "Geringer János Lakásfelújítási Szolgáltatások - Szobafestés, Mázolás, Tapétázás, Gipszkartonozás",
+                        window.location.href);
 
     return (
         <section className="flex flex-col">

@@ -2,7 +2,10 @@ import Cookies from "universal-cookie"
 
 export const experationDate = {
     WEEK: 1000 * 3600 * 24 * 7,
-    MONTH: 1000 * 3600 * 24 * 30
+    MONTH: 1000 * 3600 * 24 * 30,
+    QYEAR: 1000 * 3600 * 24 * 90,
+    HYEAR: 1000 * 3600 * 24 * 180,
+    YEAR: 1000 * 3600 * 24 * 365
 };
 
 export const setCookie = (name, value, expdate) => {

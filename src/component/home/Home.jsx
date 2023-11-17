@@ -1,9 +1,10 @@
 import Marketing from "./Marketing";
 import WorkProgress from "./WorkProgress";
-import useTitleChange from "../utility/useTitleChange";
+import useMetaDataChange from "../utility/useMetaDataChange";
 
 function Home() {
-    useTitleChange("Geringer János - Lakásfelújítás Vecsésen, Budapesten és Pest megyében");
+    useMetaDataChange("Lakásfelújítási munkálatok után érdeklődsz mint Külső és belső Festés, Mázolás, Gipszkartonozás, Tapétázás akkor jó helyen jársz.",
+                        "Geringer János - Lakásfelújítás Vecsésen, Budapesten és Pest megyében", window.location.href);
 
     return (
         <>

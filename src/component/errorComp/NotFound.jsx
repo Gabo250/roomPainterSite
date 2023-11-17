@@ -1,8 +1,8 @@
 import { NotFoundIcon } from "../utility/Icons";
-import useTitleChange from "../utility/useTitleChange";
+import useMetaDataChange from "../utility/useMetaDataChange";
 
 function NotFound() {
-    useTitleChange("Az oldal nem található");
+    useMetaDataChange("404 - ERROR", "Az oldal nem található", window.location.href);
 
     return (
         <section className="relative flex justify-center items-center h-[40vh] bg-neutral-800">

@@ -2,7 +2,7 @@ import { galleryImages } from "../utility/datas";
 //import TypeCard from "./TypeCard";
 import { useParams } from "react-router-dom";
 import LoadImages from "./LoadImages";
-import useTitleChange from "../utility/useTitleChange";
+import useMetaDataChange from "../utility/useMetaDataChange";
 
 /**
  * It creates a gallery for images
@@ -13,7 +13,8 @@ function Gallery() {
     const params = useParams();
     //const objKeys = Object.keys(galleryImages);
 
-    useTitleChange("Geringer János - Lakásfelújítás munkák képek");
+    useMetaDataChange("Néhány kép a saját munkáimról, amiket sikerült csinálnom - folyamatosan frissülni fog",
+                        "Geringer János - Lakásfelújítás képek a munkáimről", window.location.href);
 
     if (params['*'] !== '') {
         return <LoadImages images={ galleryImages[params['*']] } titleName={ params['*'] } />
