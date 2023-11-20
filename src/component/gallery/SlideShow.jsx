@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import { ArrowLeftIcon, ArrowRightIcon, XIcon } from "../utility/Icons";
-import useScroll from "../utility/useScroll";
 
 
 /**
@@ -13,7 +12,6 @@ import useScroll from "../utility/useScroll";
  * @returns 
  */
 function SlideShow({ images, currentIndex, loadIMG }) {
-    const scrollY = useScroll();
     const [isLeftArrowDisabled, setIsLeftArrowDisabled] = useState(() => { return currentIndex === 0 });
     const [isRightArrowDisabled, setIsRightArrowDisabled] = useState(() => { return currentIndex === images.length - 1 });
     const index = useRef(currentIndex);
@@ -63,7 +61,7 @@ function SlideShow({ images, currentIndex, loadIMG }) {
     }
 
     return (
-        <div style={ { top: scrollY } } className="absolute w-full h-screen bg-black bg-opacity-40 backdrop-blur-lg overflow-hidden z-10">
+        <div className="absolute w-full h-screen bg-black bg-opacity-40 backdrop-blur-lg overflow-hidden z-10">
             <button onClick={ handleCLoseCLick } className="absolute left-[calc(100%-4rem)]">
                 <XIcon className={ "w-12 h-12" } />
             </button>    

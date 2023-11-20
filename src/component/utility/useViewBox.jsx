@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import useScroll from "./useScroll";
+import { useEffect, useRef, useState } from "react";
 
+const OFFSET = '-20px';
 
 /**
 * Checks a react element to if it is in the viewport
@@ -11,19 +11,25 @@ import useScroll from "./useScroll";
 */
 function useViewBox(element) {
     const [inViewBox, setInViewBox] = useState(() => { return false });
-    const scrollY = useScroll();
-    const OFFSET = 20;
+    const obsRef = useRef(null);
+
+    useEffect(() => {              
+        obsRef.current = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setInViewBox(true);
+                }
+            })
+        }, { rootMargin: OFFSET });
+    }, []);
 
     useEffect(() => {
-        if (!element.current){
-            return;
-        }
+        obsRef.current.observe(element.current);        
 
-        const rect = element.current.getBoundingClientRect();          
-        if(Math.abs(rect.top) + OFFSET < window.innerHeight && rect.bottom - OFFSET > 0 && !inViewBox) {                           
-            setInViewBox(true);                
+        return () => {
+            obsRef.current.disconnect();
         }
-    }, [scrollY, inViewBox, element]);
+    }, [element]);
 
     return inViewBox;
 }

@@ -1,10 +1,12 @@
 import Marketing from "./Marketing";
 import WorkProgress from "./WorkProgress";
 import useMetaDataChange from "../utility/useMetaDataChange";
+import { metaDatas } from "../utility/datas";
+
+const META = metaDatas.home;
 
 function Home() {
-    useMetaDataChange("Lakásfelújítási munkálatok után érdeklődsz mint Külső és belső Festés, Mázolás, Gipszkartonozás, Tapétázás akkor jó helyen jársz.",
-                        "Geringer János - Lakásfelújítás Vecsésen, Budapesten és Pest megyében", window.location.href);
+    useMetaDataChange(META.description, META.title, window.location.href);
 
     return (
         <>

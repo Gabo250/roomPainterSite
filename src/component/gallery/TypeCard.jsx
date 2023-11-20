@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { ArrowIcon } from "../utility/Icons";
+import Card from "../utility/Card";
 
 function TypeCard({ name, images }) {
     const currentLocation = useLocation();
@@ -9,7 +10,7 @@ function TypeCard({ name, images }) {
     const rndURL = images[rndNumber];
                    
     return(
-        <article key={ name } className="flex flex-col w-[20rem] gap-3 bg-gradient-to-r from-slate-400 to-cyan-100 shadow-2xl shadow-blue-200 pb-8"> 
+        <Card key={ name } variant='vertical' shadow='xl2' className="w-[20rem] gap-3 bg-gradient-to-r from-slate-400 to-cyan-100 shadow-blue-200 pb-8"> 
             <div className="overflow-hidden">
                 <img src={ rndURL.url } alt={ rndURL.alt } className="w-full h-[10rem] object-cover transition-transform duration-[1500ms] hover:scale-110" />
             </div>
@@ -27,7 +28,7 @@ function TypeCard({ name, images }) {
                 <span>Képek</span>
                 <ArrowIcon />
             </Link>            
-        </article>
+        </Card>
     );
 }
 

@@ -4,11 +4,40 @@ import { PriceOfferIcon, SurveyIcon } from "./Icons";
 
 export const navItems = [
     { name: "Főoldal", href: "/" },
-    { name: "Szolgáltatások", href: "/szolgaltatasok" },
+    { name: "Szolgáltatások", href: "/szolgaltatasok",
+        almenu: [
+            { name: "Szobafestés", href: "./szobafestes" },
+            { name: "Mázolás", href: "./mazolas" },
+            { name: "Tapétázás", href: "./tapetazas" },
+            { name: "Gipszkartonozás", href: "./gipszkartonozas" }
+        ]
+    },
     { name: "Munkák", href: "/munkak" },
     { name: "Árak", href: "/arak" },
     { name: "Kapcsolat", href: "#conn" }
 ];
+
+export const metaDatas = {
+    home: {
+        title: "Geringer János - Lakásfelújítás Budapesten és Pest megyében",
+        description: "Lakásfelújítási munkálatok után érdeklődsz mint Külső és belső Festés, Mázolás, Gipszkartonozás, Tapétázás akkor jó helyen jársz."
+    },
+
+    services: {
+        title: "Geringer János Lakásfelújítási Szolgáltatásaim - Szobafestés, Mázolás, Tapétázás, Gipszkartonozás",
+        description: "Lakásfelújítás munkálatok leírása - mikre érdemes figyelni adott munkálatnál"
+    },
+
+    prices: {
+        title: "Geringer János - Lakásfelújítási munkálatok árai",
+        description: "Részletes árlista a lakásfelújítás munkálatoknak - az árak csak a munkadíjt foglalják magukba"
+    },
+
+    gallery: {
+        title: "Geringer János - Képek",
+        description: "Néhány kép a saját munkáimról"
+    }
+}
 
 export const headerTexts = [
     'festés', 'mázolás', 'tapétázás', 'gipszkartonozás'
@@ -37,7 +66,7 @@ export const workFlow = [
         description: `Előzetes időpont egyeztetés után helyszíni felmérés következik,
                       ahol megnézem a falakat, hogy milyen állapotban vannak illetve felmérem a munkaterületet.
                       A felmérés Vecsés és 30 km-es körzetében ingyenes, az ennél távolabb eső helyszínekről üzemanyag pénzt számolok fel,
-                      amit levonok a végső árból az árajánlat ELFOGADÁSA esetén.`,
+                      amit levonok a végső árból az árajánlat elfogadása esetén.`,
         icon: <SurveyIcon />
     },
 
@@ -70,6 +99,7 @@ export const serviceItems = [
                 'Szakszerűség:': `Ha nincs tapasztalata a szobafestés terén, érdemes fontolóra venni egy szakember segítségét.
                                     Ők tapasztaltak az optimális színek, technikák és anyagok kiválasztásában.`
             },
+        link: "../szobafestes",
         img: './img/festés.webp',
         icon: './img/teddy henger icon.webp',
         alt: 'falfestés teddy hengerrel',
@@ -88,6 +118,7 @@ export const serviceItems = [
                                         Ezért mint a fentebb említve lett gyakran csiszolni kell a felületet.`,
                 'Festékválasztás:': `A megfelelő festék kiválasztása kulcsfontosságú. Célszerű jó minőségü festéket választani.`
             },
+        link: "../mazolas",
         img: './img/mázolás.webp',
         icon: './img/teddy henger icon.webp',        
         alt: 'ajtó mázolás kis teddy hengerrel',
@@ -110,6 +141,7 @@ export const serviceItems = [
                                         majd az illesztés során pontosan illesztik össze a mintázatot.
                                         A pontos vágás és illesztés kulcsfontosságú a szép végeredmény eléréséhez.`
             },
+        link: "../tapetazas",
         img: './img/tapétázás.webp',
         icon: './img/tapéta icon.webp', 
         alt: 'fal tapétázás',
@@ -130,6 +162,7 @@ export const serviceItems = [
                 'Gyors telepítés:': `A gipszkartonok gyorsan telepíthetők, ami időt és munkát takarít meg.
                                     Az építési vagy felújítási projektek gyorsabb befejezését teszi lehetővé.`
             },
+        link: "../gipszkartonozas",
         img: './img/gipszkartonozás.webp',
         icon: './img/gipszkarton icon.webp',
         alt: 'gipszkartonozás létráról',
@@ -137,9 +170,13 @@ export const serviceItems = [
     }
 ];
 
+export const paintingDatas = {
+    
+}
+
 export const servPrices = {
     
-        "Előmunkálatok": {
+        "Előmunkálat": {
             "Horony vakolás (5cm mélységig)": "1 000 Ft / nm",
             "Glettelés": "750 Ft / nm",
             "Csiszolás": "160 Ft / nm",
@@ -151,7 +188,7 @@ export const servPrices = {
             "Rozetta": "1500 Ft-tól"            
         },
 
-        "Festés": {
+        "Szobafestés": {
             "Műanyagfesték eltávolítás": "800 Ft / nm",
             "Enyves, mészfesték eltávolítás": "650 Ft / nm",
             "Színhatárképzés szalaggal": "250 Ft / fm",

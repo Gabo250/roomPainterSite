@@ -7,7 +7,7 @@ function Header() {
     return(
         <header className="relative overflow-hidden z-[1]">
             <Nav />
-            <div className="relative bg-brushes bg-no-repeat bg-cover bg-fixed w-full h-[40rem] grayscale-[70%] z-[-1]"></div>
+            <div className="relative bg-brushes bg-no-repeat bg-cover bg-fixed w-full h-[40rem] grayscale-[70%] z-[-1] 2xsm:h-[25rem]"></div>
             <TimedText text={ headerTexts } interval={ 2000 } />
         </header>
     );
