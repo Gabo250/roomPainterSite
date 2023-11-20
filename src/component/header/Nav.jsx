@@ -36,26 +36,7 @@ function Nav() {
                                             <NavLink onClick={ handleNavItem } to={ nav.href } style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
                                                     className={`relative uppercase font-bold p-5 ${ MENU_ITEM_STYLE } `}
                                             >
-                                                {nav.name}                                                
-                                            </NavLink>
-                                            {
-                                                    nav.almenu ? 
-                                                        <div className="absolute bg-gradient-to-bl backdrop-blur-sm from-slate-300 to-[rgb(0_0_0_/_0)] 
-                                                                        flex left-[50%] -translate-x-[50%] -translate-y-[12%] origin-top scale-0 transition-transform duration-500 top-[100%] flex-col items-end z-10 [clip-path:polygon(0%_0%,100%_0%,100%_100%,92%_96%,84%_100%,77%_96%,70%_100%,63%_96%,56%_100%,49%_96%,42%_100%,35%_96%,28%_100%,21%_96%,14%_100%,7%_96%,0_100%)]
-                                                                        group-hover:scale-100 group-hover:translate-y-0 md:hidden">
-                                                            {
-                                                                nav.almenu.map((alnav) => {
-                                                                    return ( 
-                                                                        <NavLink key={ alnav.href } to={ alnav.href } style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
-                                                                                    className={ `relative uppercase p-5 font-[500] text-[.9rem] italic ${ MENU_ITEM_STYLE } ` } >
-                                                                            { alnav.name }
-                                                                        </NavLink>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </div> 
-                                                    : null
-                                            }
+                                              {nav.name}                                              
                                         </div>                                 
                                 )
                             }
