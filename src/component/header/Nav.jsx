@@ -35,8 +35,9 @@ function Nav() {
                                         <div key={ nav.href } className="relative group flex justify-center">
                                             <NavLink onClick={ handleNavItem } to={ nav.href } style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
                                                     className={`relative uppercase font-bold p-5 ${ MENU_ITEM_STYLE } `}
-                                            >
-                                              {nav.name}                                              
+                                            >    
+                                              {nav.name}                                                
+                                            </NavLink>                                          
                                         </div>                                 
                                 )
                             }
