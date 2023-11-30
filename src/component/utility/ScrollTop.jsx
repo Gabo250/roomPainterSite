@@ -7,13 +7,16 @@ import { useLocation } from "react-router-dom"
 * @returns null
 */
 function ScrollTop() {
-    const path = useLocation();
+    const path = useLocation(); 
 
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }, [path]);
+        let to = 0;
+        if(path.hash.includes('#')) {
+            to = document.getElementById(path.hash.slice(1)).offsetTop;
+        }
 
-    return null
+        window.scrollTo({ top: to, behavior: "smooth" });
+    }, [path]);
 }
 
 export default ScrollTop;

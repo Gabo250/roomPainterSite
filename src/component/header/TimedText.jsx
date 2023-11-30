@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import useTimer from "../utility/useTimer";
+import useTimer from "../hooks/useTimer";
+
 
 /**
 * Creates an element that changes the given text at a given interval

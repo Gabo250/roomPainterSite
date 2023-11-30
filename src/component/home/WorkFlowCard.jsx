@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import useViewBox from "../utility/useViewBox";
 import Card from "../utility/Card";
+import useViewBox from "../hooks/useViewBox";
 
 function WorkFlowCard({ name, description, icon }) {
     const titleRef = useRef();

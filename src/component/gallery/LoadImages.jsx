@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SlideShow from "./SlideShow";
-import useMetaDataChange from "../utility/useMetaDataChange";
+import useMetaDataChange from "../hooks/useMetaDataChange";
+
 
 /**
  * It creates a section with images.

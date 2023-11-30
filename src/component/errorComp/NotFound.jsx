@@ -1,5 +1,6 @@
+import useMetaDataChange from "../hooks/useMetaDataChange";
 import { NotFoundIcon } from "../utility/Icons";
-import useMetaDataChange from "../utility/useMetaDataChange";
+
 
 function NotFound() {
     useMetaDataChange("404 - ERROR", "Az oldal nem található", window.location.href);

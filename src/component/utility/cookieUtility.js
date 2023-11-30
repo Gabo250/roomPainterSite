@@ -11,7 +11,6 @@ export const experationDate = {
 export const setCookie = (name, value, expdate) => {
     const cookie = new Cookies();    
     const date = new Date(new Date().getTime() + expdate);
-    console.log(date);
 
     cookie.set(name, value, {
         path: "/",

@@ -1,6 +1,6 @@
-import Marketing from "./Marketing";
-import WorkProgress from "./WorkProgress";
-import useMetaDataChange from "../utility/useMetaDataChange";
+import Marketing from "../home/Marketing";
+import WorkProgress from "../home/WorkProgress";
+import useMetaDataChange from "../hooks/useMetaDataChange";
 import { metaDatas } from "../utility/datas";
 
 const META = metaDatas.home;

@@ -9,9 +9,9 @@ const MENU_ITEM_STYLE = `after:content-[''] after:absolute after:w-[calc(100%-2.
                         after:left-[1.25rem]  hover:after:block after:origin-left after:hover:origin-right hover:after:scale-x-100
                         before:content-[''] before:absolute before:top-[20%] before:left-[1.25rem] before:w-[calc(100%-2.5rem)] before:transition-transform
                         before:duration-500 before:h-[2px] before:bg-white before:scale-x-0 before:origin-right before:hover:origin-left hover:before:scale-x-100`;
-
+                   
 function Nav() {
-    const [burgClicked, setBurgClicked] = useState(false);    
+    const [burgClicked, setBurgClicked] = useState(false);   
 
     const handleNavItem = () => {
         if (burgClicked){
@@ -33,40 +33,53 @@ function Nav() {
                             if (nav.name !== "Kapcsolat") {
                                 return (
                                         <div key={ nav.href } className="relative group flex justify-center">
-                                            <NavLink onClick={ handleNavItem } to={ nav.href } style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
-                                                    className={`relative uppercase font-bold p-5 ${ MENU_ITEM_STYLE } `}
+                                            <NavLink 
+                                                onClick={ handleNavItem }
+                                                to={ nav.href }
+                                                style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
+                                                className={`relative uppercase font-bold p-5 ${ MENU_ITEM_STYLE } `}
                                             >
                                                 {nav.name}                                                
                                             </NavLink>
                                             {
-                                                    nav.almenu ? 
-                                                        <div className="absolute bg-gradient-to-bl backdrop-blur-sm from-slate-300 to-[rgb(0_0_0_/_0)] 
-                                                                        flex left-[50%] -translate-x-[50%] -translate-y-[12%] origin-top scale-0 transition-transform duration-500 top-[100%] flex-col items-end z-10 [clip-path:polygon(0%_0%,100%_0%,100%_100%,92%_96%,84%_100%,77%_96%,70%_100%,63%_96%,56%_100%,49%_96%,42%_100%,35%_96%,28%_100%,21%_96%,14%_100%,7%_96%,0_100%)]
-                                                                        group-hover:scale-100 group-hover:translate-y-0 md:hidden">
-                                                            {
-                                                                nav.almenu.map((alnav) => {
-                                                                    return ( 
-                                                                        <NavLink key={ alnav.href } to={ alnav.href } style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
-                                                                                    className={ `relative uppercase p-5 font-[500] text-[.9rem] italic ${ MENU_ITEM_STYLE } ` } >
-                                                                            { alnav.name }
-                                                                        </NavLink>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </div> 
-                                                    : null
+                                                nav.almenu ? 
+                                                    <div className="absolute bg-gradient-to-bl backdrop-blur-sm from-slate-300 to-[rgb(0_0_0_/_0)] 
+                                                                    flex left-[50%] -translate-x-[50%] -translate-y-[12%] origin-top scale-0 transition-transform duration-500 top-[100%] flex-col items-end z-10 [clip-path:polygon(0%_0%,100%_0%,100%_100%,92%_96%,84%_100%,77%_96%,70%_100%,63%_96%,56%_100%,49%_96%,42%_100%,35%_96%,28%_100%,21%_96%,14%_100%,7%_96%,0_100%)]
+                                                                    group-hover:scale-100 group-hover:translate-y-0 md:hidden">
+                                                        {
+                                                            nav.almenu.map((alnav) => {
+                                                                return ( 
+                                                                    <NavLink
+                                                                        key={ alnav.href }
+                                                                        to={ alnav.href }
+                                                                        style={({ isActive }) => { return isActive ? { color: 'white' } : {} }}
+                                                                        className={ `relative uppercase p-5 font-[500] text-[.9rem] italic ${ MENU_ITEM_STYLE } ` }
+                                                                    >
+                                                                        { alnav.name }
+                                                                    </NavLink>
+                                                                )
+                                                            })
+                                                        }
+                                                    </div> 
+                                                : null
                                             }
                                         </div>                                 
                                 )
                             }
                             else {
-                                return <ScrollLink onClick={ handleNavItem } key={ nav.href } to={ nav.href } scrollInfo={ {behavior: "smooth", block: "start"} }
-                                        className={`relative uppercase p-5 font-bold
-                                                    after:content-[''] after:absolute after:w-[calc(100%-2.5rem)] after:scale-x-0 after:transition-transform after:duration-500 after:h-[2px] after:bg-white after:top-[80%]
-                                                    after:left-[1.25rem]  hover:after:block after:origin-left after:hover:origin-right hover:after:scale-x-100
-                                                    before:content-[''] before:absolute before:top-[20%] before:left-[1.25rem] before:w-[calc(100%-2.5rem)] before:transition-transform
-                                                    before:duration-500 before:h-[2px] before:bg-white before:scale-x-0 before:origin-right before:hover:origin-left hover:before:scale-x-100`}
-                                 >{nav.name}</ScrollLink>
+                                return <ScrollLink
+                                            onClick={ handleNavItem }
+                                            key={ nav.href }
+                                            to={ nav.href }
+                                            scrollInfo={ { behavior: "smooth", block: "start" } }
+                                            className={`relative uppercase p-5 font-bold
+                                                        after:content-[''] after:absolute after:w-[calc(100%-2.5rem)] after:scale-x-0 after:transition-transform after:duration-500 after:h-[2px] after:bg-white after:top-[80%]
+                                                        after:left-[1.25rem]  hover:after:block after:origin-left after:hover:origin-right hover:after:scale-x-100
+                                                        before:content-[''] before:absolute before:top-[20%] before:left-[1.25rem] before:w-[calc(100%-2.5rem)] before:transition-transform
+                                                        before:duration-500 before:h-[2px] before:bg-white before:scale-x-0 before:origin-right before:hover:origin-left hover:before:scale-x-100`}
+                                        >
+                                            {nav.name}
+                                        </ScrollLink>
                             }
                     })
                 }

@@ -5,7 +5,7 @@ import ScrollLink from "../header/ScrollLink";
 
 function Footer() {
     return (
-        <footer id="conn" className="flex flex-row justify-evenly items-center py-10 bg-slate-600 xsm:flex-col xsm:gap-10">
+        <footer id="conn" className="flex flex-row justify-evenly items-center py-10 bg-slate-800 xsm:flex-col xsm:gap-10">
             <article className="flex flex-col gap-2">
                 <img src="./img/gj-logo.webp" alt="GJ logo" className="relative w-14 h-[35.897px] left-[50%] -translate-x-[50%] bottom-4" />
 

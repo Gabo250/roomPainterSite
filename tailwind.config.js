@@ -10,7 +10,8 @@ module.exports = {
       animation: {
         'scaleX': 'scaleX .8s',
         'fade-in': 'fade-in 1.5s',
-        'fade-out': 'fade-out 1.5s'
+        'fade-out': 'fade-out 1.5s',
+        'hide-on': 'hide 0s linear 1s'
       },
 
       keyframes: {
@@ -27,6 +28,10 @@ module.exports = {
         'scaleX': {
           '0%': { transform: 'scale(0,1)' },
           '100%': { transform: 'scale(1,1)' }
+        },
+
+        "hide": {
+            '100%': { display: 'none' }
         }
       },
 

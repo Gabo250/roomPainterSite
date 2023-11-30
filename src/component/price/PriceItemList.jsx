@@ -1,7 +1,9 @@
+import getObjKeysValues from "../utility/GetObjKeysValues";
 import PriceItem from "./PriceItem";
 
 function PriceItemList({ priceList }) {
-    const objKeys = Object.keys(priceList);
+    const [objKeys] = getObjKeysValues(priceList);
+    objKeys.shift();
 
     return (
         <>

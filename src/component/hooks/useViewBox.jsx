@@ -13,21 +13,29 @@ function useViewBox(element) {
     const [inViewBox, setInViewBox] = useState(() => { return false });
     const obsRef = useRef(null);
 
-    useEffect(() => {              
+    useEffect(() => {      
+        if (!element.current) {
+            return;
+        }        
+
         obsRef.current = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting) {                      
                     setInViewBox(true);
                 }
             })
-        }, { rootMargin: OFFSET });
-    }, []);
+        }, { rootMargin: OFFSET });              
+    }, [element]);
 
-    useEffect(() => {
-        obsRef.current.observe(element.current);        
+    useEffect(() => {    
+        if(!element.current){
+            return;
+        }     
+
+        obsRef.current.observe(element.current);      
 
         return () => {
-            obsRef.current.disconnect();
+            obsRef.current.disconnect();            
         }
     }, [element]);
 

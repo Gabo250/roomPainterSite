@@ -1,8 +1,9 @@
 import { galleryImages, metaDatas } from "../utility/datas";
 //import TypeCard from "./TypeCard";
 import { useParams } from "react-router-dom";
-import LoadImages from "./LoadImages";
-import useMetaDataChange from "../utility/useMetaDataChange";
+import LoadImages from "../gallery/LoadImages";
+import useMetaDataChange from "../hooks/useMetaDataChange";
+
 
 const META = metaDatas.gallery;
 
