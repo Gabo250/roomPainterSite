@@ -217,7 +217,7 @@ export const paperHangDatas = {
                         Ez magában foglalhatja a falak kaparását, tisztítását, simítását, alapozását akár glettelését és
                         a száradási idő betartását.`,
         'Tapéta eltávolítás': `Sok esetbe már a falon van tapéta, amit elszeretnénk távolítani, ehhez sokszor szükséges lehet
-                                , hogy a falat tapéta leválasztóval vagy meleg vizzel nedvesítsük a ragasztó oldodásához. Ha feloldodot a ragasztó, akkor
+                                , hogy a falat tapéta leválasztóval vagy meleg vizzel nedvesítsük a ragasztó oldódásához. Ha feloldódott a ragasztó, akkor
                                  szépen el lehet távolítani a tapétát.`
     },
     'Tapétázás': {
