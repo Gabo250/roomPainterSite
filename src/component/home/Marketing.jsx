@@ -16,8 +16,7 @@ function Marketing() {
                     chooseMeTexts.map((text) => {
                         return (
                             <Card key={ text.name } variant='vertical'
-                                    className="relative w-60 gap-3 border-solid border-b-[1px] border-t-[1px]
-                                              border-gray-300 rounded-[20px] py-4 px-4
+                                    className="relative w-60 gap-3 border-solid border-y-[1px] border-gray-300 rounded-[20px] py-4 px-4
                                                 before:absolute before:bg-white before:-top-[5px] before:left-[50%] before:-translate-x-[50%]
                                                 before:h-[5px] before:w-[11rem]
                                                 after:absolute after:bg-white after:-bottom-[5px] after:left-[50%]

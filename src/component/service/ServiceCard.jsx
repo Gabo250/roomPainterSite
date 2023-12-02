@@ -39,7 +39,7 @@ function ServiceCard({ data, name, id }){
                 }
 
                 <Button variant={ "base" } color={ "slate-transparent" } className={ "relative p-4 shadow-lg justify-start shadow-stone-400 hover:shadow-stone-600" }>
-                    <Link to={ `../arak#${ id }` } className="flex flex-row items-center gap-2  text-lg text-slate-400">{ `${ name } ár` } <ArrowRightCircleIcon strokeColor={ "rgb(148 163 184)" } className={ "w-8 h-8" } /></Link>
+                    <Link to={ `../arak#${ id }` } className="flex flex-row items-center gap-2  text-lg">{ `${ name } ár` } <ArrowRightCircleIcon strokeColor={ "rgb(148 163 184)" } className={ "w-8 h-8" } /></Link>
                 </Button>
             </section>
     );
