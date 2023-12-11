@@ -21,11 +21,11 @@ function Services() {
                                     <img src={ service.icon } alt={ service.iconAlt } className="relative h-20 w-20 ml-[50%] -translate-x-[50%]                                                                                                
                                                                                                 2xl:ml-0 2xl:translate-x-0" />
                                     <h1 className="text-[1.5rem] font-semibold text-emerald-700">{ service.name }</h1>
-                                    <p className="leading-7 text-justify text-white">{ service.description }</p>
+                                    <p className="leading-7 text-white">{ service.description }</p>
                                     <Button variant={ "base" } color={ "slate-transparent" } className={ "w-20 py-2 px-4 hover:scale-110 hover:shadow-xl hover:shadow-teal-900" }>
                                         <Link to={ service.link }>Tovább</Link>  
                                     </Button>                                  
-                                </div>                                
+                                </div>                            
 
                                 <figure className="h-[300px] w-[300px] overflow-hidden rounded-[110px] 2xsm:h-[300px] 2xsm:w-[300px]">
                                     <img src={ service.img } alt={ service.alt } className="h-[400px] w-[400px] object-cover transition-transform duration-[1500ms] hover:scale-110 2xsm:h-[300px] 2xsm:w-[300px]" />

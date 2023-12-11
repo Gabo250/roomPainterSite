@@ -21,7 +21,7 @@ function WorkFlowCard({ name, description, icon }) {
             <h2 ref={ titleRef } className={`text-[2rem] uppercase font-semibold transition-transform duration-700
                             ${ titleInViewBox ? 'scale-y-100 origin-top' : 'scale-y-0' }`}
                             >{ name }</h2>
-            <p ref={ descRef } className={`leading-6 text-justify transition-transform duration-700
+            <p ref={ descRef } className={`leading-6 transition-transform duration-700 text-justify
                                             ${ descInViewBox ? ' scale-y-100 origin-bottom' : 'scale-y-0' }`}>{ description }</p>
         </Card>
     );

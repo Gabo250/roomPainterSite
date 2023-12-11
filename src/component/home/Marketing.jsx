@@ -22,7 +22,7 @@ function Marketing() {
                                                 after:absolute after:bg-white after:-bottom-[5px] after:left-[50%]
                                                 after:-translate-x-[50%] after:h-[5px] after:w-[11rem]">
                                 <h3 className="text-[1.25rem] font-bold text-lime-700">{ text.name }</h3>
-                                <p className="leading-7 text-justify">{ text.description }</p>
+                                <p className="leading-7">{ text.description }</p>
                             </Card>
                         );
                     })

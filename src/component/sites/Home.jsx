@@ -19,7 +19,7 @@ function Home() {
                     <div className="flex flex-col items-start w-[600px] ml-40 mt-12 md:ml-6 md:w-11/12">
                         <h2 className="relative text-[2rem] mb-7 font-bold after:absolute after:top-full after:left-0 after:content-['']
                                         after:h-[6px] after:w-4/6 after:bg-yellow-800">Rólam</h2>
-                        <p className="text-left text-[1.05rem] leading-7 2xsm:text-justify pr-5">
+                        <p className="text-left text-[1.05rem] leading-7 pr-5">
                             <span className="text-[1.6rem] mr-2 font-semibold">Geringer János</span>
                             vagyok, <span className="text-green-800 text-[1.2rem] font-bold">Szobafestő-mázoló</span> végzettséggel rendelkezem.
                             Tanulmányaim befejezése után nem sokkal volt szerencsém kimenni németországba dolgozni 2 évig, ahol mester szakemberek

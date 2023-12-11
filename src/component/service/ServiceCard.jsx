@@ -20,14 +20,14 @@ function ServiceCard({ data, name, id }){
                                                                 ${ id !== nameKeys.length - 1 ? `after:w-1/2 after:top-full after:left-1/2 after:-translate-x-[50%] after:border-b-2` : '' }` 
                                                                 } > 
                                 <h2 className="mb-8 font-bold text-4xl text-lime-800">{ title }</h2>
-                                <p className="mb-4 text-justify">{ data[title].description }</p>
+                                <p className="mb-4">{ data[title].description }</p>
                                 <ul className="flex flex-col gap-2">
                                     {
                                         listKeys.map((item, id) => {
                                             return (
-                                                <li key={ item } className="flex flex-row gap-2 xsm:flex-col">
-                                                    <p className="text-white whitespace-nowrap italic underline">{ item + ':' }</p>
-                                                    <p className="text-justify">{ listValues[id] }</p>
+                                                <li key={ item } className="flex flex-row gap-2 items-start xsm:flex-col">
+                                                    <p className="text-white text-2xl whitespace-nowrap italic underline">{ item + ':' }</p>
+                                                    <p className="mt-[.4rem]">{ listValues[id] }</p>
                                                 </li>
                                             )
                                         })
