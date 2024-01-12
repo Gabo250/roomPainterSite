@@ -10,36 +10,52 @@ const META = metaDatas.prices;
 const [TITLES] = getObjKeysValues(servPrices);
 
 function Price() {
-    const lineRef = useRef();
-    const lineInViewBox = useViewBox(lineRef);
-    
-    useMetaDataChange(META.description, META.title, window.location.href);    
+  const lineRef = useRef();
+  const lineInViewBox = useViewBox(lineRef);
 
-    return (
-        <section className="bg-gradient-to-r from-zinc-700 via-zinc-400 to-slate-200 flex flex-row flex-wrap justify-center gap-40 py-20">
-            <div className="basis-full flex flex-col justify-center items-center gap-2">
-                <p ref={ lineRef } className={`relative text-3xl font-extrabold text-gray-700 text-center sm:text-[20px] 2xsm:!text-[16px]
-                            before:absolute before:left-[60%] before:top-[110%] before:w-2/5 before:h-[.35rem] before:content-['']
-                            before:bg-red-600 ${ lineInViewBox ? "before:transition-transform before:duration-[2.5s] before:origin-right before:scale-x-100" : "before:scale-x-0" }`}>Az árak az anyagot nem tartalmazzák!</p>
-            </div>
-            
-            {
-                TITLES.map((title) => {              
-                    return (
-                        <Card id={ servPrices[title].id } key={ title } variant='vertical' shadow='xl2' className="p-10 w-[50rem] gap-8 shadow-cyan-800 rounded-b-3xl xmd:w-5/6 xsm:!w-full 2xsm:px-3">
-                            <header className="flex justify-center pb-5">
-                                <h2 className="relative text-3xl font-bold before:absolute before:left-0 before:top-[140%] before:w-2/5
-                                                before:h-[.35rem] before:content-[''] before:bg-cyan-600">                                
-                                    { title + ' árak' }                                
-                                </h2>
-                            </header>
-                            <PriceItemList priceList={ servPrices[title] } />
-                        </Card>                       
-                    );
-                })
-            }
-        </section>
-    );
+  useMetaDataChange(META.description, META.title, window.location.href);
+
+  return (
+    <section className="flex flex-row flex-wrap justify-center gap-40 bg-gradient-to-r from-zinc-700 via-zinc-400 to-slate-200 py-20">
+      <div className="flex basis-full flex-col items-center justify-center gap-2">
+        <p
+          ref={lineRef}
+          className={`relative text-center text-3xl font-extrabold text-gray-700 before:absolute before:left-[60%]
+                      before:top-[110%] before:h-[.35rem] before:w-2/5 before:bg-red-600 before:content-[''] sm:text-[20px]
+                      2xsm:!text-[16px]
+                      ${
+                        lineInViewBox
+                            ? "before:origin-right before:scale-x-100 before:transition-transform before:duration-[2.5s]"
+                            : "before:scale-x-0"
+                      }`}
+        >
+          Az árak az anyagot nem tartalmazzák!
+        </p>
+      </div>
+
+      {TITLES.map((title) => {
+        return (
+          <Card
+            id={servPrices[title].id}
+            key={title}
+            variant="vertical"
+            shadow="xl2"
+            className="w-[50rem] gap-8 rounded-b-3xl p-10 shadow-cyan-800 2xsm:px-3 xsm:!w-full xmd:w-5/6"
+          >
+            <header className="flex justify-center pb-5">
+              <h2
+                className="relative text-3xl font-bold before:absolute before:left-0 before:top-[140%] before:h-[.35rem]
+                                                before:w-2/5 before:bg-cyan-600 before:content-['']"
+              >
+                {title + " árak"}
+              </h2>
+            </header>
+            <PriceItemList priceList={servPrices[title]} />
+          </Card>
+        );
+      })}
+    </section>
+  );
 }
 
 export default Price;

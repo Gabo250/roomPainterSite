@@ -23,14 +23,12 @@ function Gallery() {
     }
     else {
         return (
-            <section className="bg-gradient-to-r from-zinc-700 via-zinc-400 to-slate-200 flex flex-row justify-center flex-wrap py-20 px-10">
-                <h2 className="text-4xl font-semibold">Feltöltés alatt.</h2>
-                {
-                    /*objKeys.map((name) => {                    
+          <section className="flex flex-row flex-wrap justify-center bg-gradient-to-r from-zinc-700 via-zinc-400 to-slate-200 px-10 py-20">
+            <h2 className="text-4xl font-semibold">Feltöltés alatt.</h2>
+            {/*objKeys.map((name) => {                    
                         return <TypeCard key={ name } name={ name } images={ galleryImages[name] } />
-                    })*/
-                }
-            </section>
+                    })*/}
+          </section>
         );
     }   
 }

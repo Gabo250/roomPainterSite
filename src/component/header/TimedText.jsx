@@ -22,10 +22,17 @@ function TimedText({ text, interval }) {
     }, [tick, text])
 
     return (
-        <h1 className={ `absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] uppercase text-[4rem] font-bold text-white 
-                         backdrop-blur-[5px] p-6 rounded-2xl sm:text-[1.5rem] ${ tick ? 'animate-fade-in' : 'animate-fade-out [animation-fill-mode:forwards]' }` }>
-            { text[0] }
-        </h1>
+      <h1
+        className={`absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] rounded-2xl p-6 text-[4rem] font-bold 
+                    uppercase text-white backdrop-blur-[5px] sm:text-[1.5rem]
+                    ${
+                        tick
+                            ? "animate-fade-in"
+                            : "animate-fade-out [animation-fill-mode:forwards]"
+                    }`}
+      >
+        {text[0]}
+      </h1>
     );
 }
 

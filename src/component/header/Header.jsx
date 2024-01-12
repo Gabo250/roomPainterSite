@@ -4,12 +4,12 @@ import TimedText from "./TimedText";
 
 function Header() {
 
-    return(
-        <header className="relative overflow-hidden z-[1]">
-            <Nav />
-            <div className="relative bg-brushes bg-no-repeat bg-cover bg-fixed w-full h-[40rem] grayscale-[70%] z-[-1] 2xsm:h-[25rem]"></div>
-            <TimedText text={ headerTexts } interval={ 2000 } />
-        </header>
+    return (
+      <header className="relative z-[1] overflow-hidden">
+        <Nav />
+        <div className="relative z-[-1] h-[40rem] w-full bg-brushes bg-cover bg-fixed bg-no-repeat grayscale-[70%] 2xsm:h-[25rem]"></div>
+        <TimedText text={headerTexts} interval={2000} />
+      </header>
     );
 }
 

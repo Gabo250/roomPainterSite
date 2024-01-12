@@ -8,7 +8,7 @@ function PaperHanging() {
     useMetaDataChange(META.description, META.title, window.location.href);
 
     return (
-        <ServiceCard data={ paperHangDatas } name={ "Tapétázás" } id={ "tapetazas" } />
+      <ServiceCard data={paperHangDatas} name={"Tapétázás"} id={"tapetazas"} />
     );
 }
 

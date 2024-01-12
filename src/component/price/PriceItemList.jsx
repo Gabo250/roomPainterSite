@@ -6,13 +6,11 @@ function PriceItemList({ priceList }) {
     objKeys.shift();
 
     return (
-        <>
-            {
-                objKeys.map((key) => {
-                    return <PriceItem key={ key } name={ key } price={ priceList[key] } />
-                })
-            }
-        </>
+      <>
+        {objKeys.map((key) => {
+          return <PriceItem key={key} name={key} price={priceList[key]} />;
+        })}
+      </>
     );
 }
 
