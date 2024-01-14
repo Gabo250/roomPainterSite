@@ -3,3 +3,52 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap');
+
+.burger {
+    @apply
+        md:absolute
+        md:!flex
+        md:flex-col
+        md:gap-0
+        md:top-[100%]
+        md:left-[calc(91%-168px)]
+        md:items-end md:z-[2]
+}
+
+.menu-item-before {
+    @apply    
+        before:content-['']
+        before:absolute
+        before:top-[20%]
+        before:left-[1.25rem]
+        before:w-[calc(100%-2.5rem)]
+        before:transition-transform
+        before:duration-500
+        before:h-[2px]
+        before:bg-white
+        before:scale-x-0
+        before:origin-right        
+}
+
+.menu-item-after {
+    @apply
+        after:content-['']
+        after:absolute
+        after:w-[calc(100%-2.5rem)]
+        after:scale-x-0
+        after:transition-transform
+        after:duration-500
+        after:h-[2px]
+        after:bg-white
+        after:top-[80%]
+        after:left-[1.25rem]                        
+}
+
+.menu-item-hover {
+    @apply
+        after:hover:origin-right
+        hover:after:block after:origin-left
+        hover:after:scale-x-100 
+        before:hover:origin-left
+        hover:before:scale-x-100
+}

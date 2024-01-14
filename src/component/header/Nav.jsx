@@ -4,13 +4,6 @@ import BurgerNav from "./BurgerNav";
 import { useState } from "react";
 import ScrollLink from "./ScrollLink";
 
-const BURGERSTYLE =
-  "md:absolute md:!flex md:flex-col md:gap-0 md:top-[100%] md:left-[calc(91%-168px)] md:items-end md:z-[2]";
-const MENU_ITEM_STYLE = `after:content-[''] after:absolute after:w-[calc(100%-2.5rem)] after:scale-x-0 after:transition-transform after:duration-500 after:h-[2px] after:bg-white after:top-[80%]
-                        after:left-[1.25rem]  hover:after:block after:origin-left after:hover:origin-right hover:after:scale-x-100
-                        before:content-[''] before:absolute before:top-[20%] before:left-[1.25rem] before:w-[calc(100%-2.5rem)] before:transition-transform
-                        before:duration-500 before:h-[2px] before:bg-white before:scale-x-0 before:origin-right before:hover:origin-left hover:before:scale-x-100`;
-
 function Nav() {
   const [burgClicked, setBurgClicked] = useState(false);
 
@@ -30,11 +23,11 @@ function Nav() {
       />
 
       <nav
-        className={`relative flex flex-row gap-5 md:gap-0
+        className={`relative flex flex-row gap-5 md:gap-0 burger
                             ${
                               burgClicked
-                                ? `${BURGERSTYLE} md:scale-100 md:transition-transform md:duration-500`
-                                : `${BURGERSTYLE} md:-translate-y-[60%] md:translate-x-[40%] md:scale-0 md:transition-transform md:duration-500`
+                                ? `md:scale-100 md:transition-transform md:duration-500`
+                                : `md:-translate-y-[60%] md:translate-x-[40%] md:scale-0 md:transition-transform md:duration-500`
                             }`}
       >
         {navItems.map((nav) => {
@@ -50,14 +43,16 @@ function Nav() {
                   style={({ isActive }) => {
                     return isActive ? { color: "white" } : {};
                   }}
-                  className={`relative p-5 font-bold uppercase ${MENU_ITEM_STYLE} `}
+                  className={`menu-item-before menu-item-after menu-item-hover relative p-5 font-bold uppercase`}
                 >
                   {nav.name}
                 </NavLink>
                 {nav.almenu ? (
                   <div
                     className="absolute left-[50%] top-[100%] z-10 flex 
-                                origin-top -translate-x-[50%] -translate-y-[12%] scale-0 flex-col items-end bg-gradient-to-bl from-slate-300 to-[rgb(0_0_0_/_0)] backdrop-blur-sm transition-transform duration-500 [clip-path:polygon(0%_0%,100%_0%,100%_100%,92%_96%,84%_100%,77%_96%,70%_100%,63%_96%,56%_100%,49%_96%,42%_100%,35%_96%,28%_100%,21%_96%,14%_100%,7%_96%,0_100%)]
+                                origin-top -translate-x-[50%] -translate-y-[12%] scale-0 flex-col items-end
+                                bg-gradient-to-bl from-slate-300 to-[rgb(0_0_0_/_0)] backdrop-blur-sm transition-transform duration-500
+                                [clip-path:polygon(0%_0%,100%_0%,100%_100%,92%_96%,84%_100%,77%_96%,70%_100%,63%_96%,56%_100%,49%_96%,42%_100%,35%_96%,28%_100%,21%_96%,14%_100%,7%_96%,0_100%)]
                                 group-hover:translate-y-0 group-hover:scale-100 md:hidden"
                   >
                     {nav.almenu.map((alnav) => {
@@ -68,7 +63,7 @@ function Nav() {
                           style={({ isActive }) => {
                             return isActive ? { color: "white" } : {};
                           }}
-                          className={`relative p-5 text-[.9rem] font-[500] uppercase italic ${MENU_ITEM_STYLE} `}
+                          className={`menu-item-before menu-item-after menu-item-hover relative p-5 text-[.9rem] font-[500] uppercase italic`}
                         >
                           {alnav.name}
                         </NavLink>
@@ -85,13 +80,7 @@ function Nav() {
                 key={nav.href}
                 to={nav.href}
                 scrollInfo={{ behavior: "smooth", block: "start" }}
-                className={`relative p-5 font-bold uppercase
-                            before:absolute before:left-[1.25rem] before:top-[20%] before:h-[2px] before:w-[calc(100%-2.5rem)]
-                            before:origin-right before:scale-x-0 before:bg-white before:transition-transform
-                            before:duration-500  before:content-[''] after:absolute after:left-[1.25rem] after:top-[80%]
-                            after:h-[2px] after:w-[calc(100%-2.5rem)] after:origin-left after:scale-x-0 after:bg-white
-                            after:transition-transform after:duration-500 after:content-[''] before:hover:origin-left
-                            hover:before:scale-x-100 hover:after:block after:hover:origin-right hover:after:scale-x-100`}
+                className={`relative p-5 font-bold uppercase menu-item-before menu-item-after menu-item-hover`}
               >
                 {nav.name}
               </ScrollLink>
