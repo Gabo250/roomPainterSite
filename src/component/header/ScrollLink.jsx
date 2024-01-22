@@ -16,7 +16,7 @@ function ScrollLink({ to, scrollInfo, className, children, onClick }) {
         }
 
         if (onClick) {
-            onClick();
+          onClick();
         }
 
         const clickedElement = e.currentTarget;
