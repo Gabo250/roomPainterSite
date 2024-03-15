@@ -284,14 +284,14 @@ export const servPrices = {
   Előmunkálat: {
     id: "elomunkalat",
     "Horony vakolás (5cm mélységig)": "1 000 Ft / nm",
-    Glettelés: "750 Ft / nm",
-    Csiszolás: "160 Ft / nm",
-    Élvédőzés: "400 Ft / fm",
-    Papírtakarás: "340 Ft / nm",
-    Fóliatakarás: "200 Ft / nm",
+    "Glettelés": "750 Ft / nm",
+    "Csiszolás": "160 Ft / nm",
+    "Élvédőzés": "400 Ft / fm",
+    "Papírtakarás": "340 Ft / nm",
+    "Fóliatakarás": "200 Ft / nm",
     "Stukkózás 5cm-ig": "650 Ft-tól",
     "Stukkózás 5cm felett": "850 Ft-tól",
-    Rozetta: "1500 Ft-tól",
+    "Rozetta": "1500 Ft-tól",
   },
 
   Szobafestés: {
@@ -304,7 +304,7 @@ export const servPrices = {
     "Festés - fehér (2 réteg)": "1 400 Ft / nm",
     "Penészgátló festés (2 réteg)": "1 400 Ft / nm",
     "Homlokzatfestés - fehér (2 réteg)": "2 100 Ft / nm",
-    Díszítőfestés: "3 500 Ft-tól / nm",
+    "Díszítőfestés": "3 500 Ft-tól / nm",
   },
 
   Mázolás: {
@@ -333,16 +333,16 @@ export const servPrices = {
 
   Gipszkartonozás: {
     id: "gipszkartonozas",
-    Előtétfal: "3 500 Ft / nm",
+    "Előtétfal": "3 500 Ft / nm",
     "Válaszfal (2x2)": "4 800 Ft / nm",
     "Válaszfal (2x1)": "4 000 Ft / nm",
     "Mennyezet (szimpla szerkezettel)": "3 800 Ft / nm",
     "Álmennyezet (dupla szerkezettel)": "4 500 Ft / nm",
-    Ragasztás: "2 800 Ft / nm",
-    Spalettázás: "2 500 Ft / nm",
-    Szigetelés: "750 Ft / nm",
-    Fóliázás: "400 Ft / nm",
-    "Bandázsolás:": "750 Ft / fm",
+    "Ragasztás": "2 800 Ft / nm",
+    "Spalettázás": "2 500 Ft / nm",
+    "Szigetelés": "750 Ft / nm",
+    "Fóliázás": "400 Ft / nm",
+    "Bandázsolás": "750 Ft / fm",
   },
 };
 
